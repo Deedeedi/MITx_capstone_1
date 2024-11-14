@@ -1,4 +1,4 @@
-\section{Asymptotic Hypothesis tests (Theory)}
+\section{Hypothesis tests}
 
 Two hypotheses ($\Theta_0$ disjoint set from $\Theta_1$):
 $\begin{cases}
@@ -6,8 +6,6 @@ $\begin{cases}
 		H_1: \theta \epsilon \Theta_1\\
 \end{cases}$. Goal is to reject $H_0$ using a test statistic.\\
 
-\textbf{Statistic}\\
-A (statistical) test is an statistic whose output is always either 0 or 1, and like an estimator, does not depend explicitly on the value of true unknown parameter. \\
 A test $\psi$ has \textbf{level $\alpha$} if $\alpha_{\psi}(\theta) \leq \alpha, \forall \theta \in \Theta_0.$ and \textbf{asymptotic level $\alpha$} if $\lim _{n \to \infty } P_\theta ( \psi = 1) \leq \alpha$.\\
 
 \textbf{A hypothesis-test} has the form 
@@ -26,11 +24,10 @@ R_{\psi} = \lbrace T_n > c \rbrace
 \end{align*}
 
 \textbf{Power of the test}:\\
-\textit{worst possible result of Type II}:
 \begin{align*}
-\pi_\psi = \inf_{\theta \in \Theta_1}(1 - \beta_\psi(\theta))
+%\pi_\psi = \inf_{\theta \in \Theta_1}(1 - \beta_\psi(\theta))
+$Power = 1 - P(type II Error) = 1 - \beta_\psi(\theta)$
 \end{align*}
-Where $\beta_\psi$ is the probability of making a Type2 Error and $inf$ is the minimum.\\
 \textbf{Two-sided test}:
 \begin{align*}
 H_1&: \theta \neq \Theta_0\\
@@ -44,7 +41,7 @@ H_1&: \theta < \Theta_0\\
 \mathbf{1}&(T_ n > q_{\alpha})
 \end{align*}
 \textbf{Type1 Error:}\\
-Test rejects null hypothesis $\psi = 1$ but it is actually true $H_0 = TRUE$ also known as the level of a test.\\
+Test rejects null hypothesis $(statistic \psi = 1)$ but it is actually true $H_0 = TRUE$ also known as the level of a test.\\
 \textbf{Type2 Error:}\\
 Test does not reject null hypothesis $\psi = 0$ but alternative hypothesis is true $H_1 = TRUE$\\
 \textbf{Example:} Let $X_1, \ldots , X_ n \stackrel{i.i.d.}{\sim } \text {Ber}(p^*)$. Question: is $p^* = 1/2$.\\
@@ -96,7 +93,7 @@ $\sqrt(n) (g(\hat{p}_x,\hat{p}_y) - g(p_x-p_y)) \xrightarrow[n \rightarrow \inft
 
 $\Rightarrow N(0,p_x(1-px) + p_y(1-py))$
 
-\section{Non-asymptotic Hypothesis tests (Tests)}
+\section{Non-asymptotic Hypothesis tests}
 
 \subsection{Chi squared}
 The $\chi _ d^2$ distribution with $d$ degrees of freedom is given by the distribution of $Z_1^2 + Z_2^2 + \cdots + Z_ d^2,$ where $Z_1, \ldots , Z_ d \stackrel{iid}{\sim } \mathcal{N}(0,1)$

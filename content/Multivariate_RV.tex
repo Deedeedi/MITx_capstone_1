@@ -1,4 +1,4 @@
-\section{Random Vectors}
+\section{Multivariate Related}
 
 
 A random vector $\mathbf X= \left(X^{(1)},\dots ,X^{(d)}\right)^ T$ of dimension $d \times 1$ is a vector-valued function from a probability space $\omega$ to $\mathbb {R}^ d$:\\
@@ -112,3 +112,8 @@ $\sqrt(n) \Sigma^{-1/2} \bar{X_n}-\mu \xrightarrow[n \rightarrow \infty]{(d)} N(
 Where $\Sigma^{-1/2}$ is the $d \times d$ matrix such that $\Sigma^{-1/2} \Sigma^{-1/2} = \Sigma^{1}$ and $I_d$ is the identity matrix.\\
 
 \subsection*{Multivariate Delta Method}
+Given a sequence of r.v $(\mathbb{T}_n)_{n \geq 1}$ satisfying $\sqrt{n}(\mathbb{T}_n-\mathbf{\Theta}) \xrightarrow[(d)]{n\rightarrow \infty} \mathbb{T}$ \\
+and $g$ is continuously differentiable at $\mathbf{\Theta}$ \\
+then \\
+$\sqrt{n}(g(\mathbb{T}_n)-g(\mathbf{\Theta})) \xrightarrow[(d)]{n\rightarrow \infty} \mathbf{\Delta} g(\mathbf{\Theta}^T)\mathbf{T} $ \\
+where $\mathbf{\Delta}g=[\mathbf{\Delta}g_1\mathbf{\Delta}g_2 \mathbf{\Delta}g_3 ... \mathbf{\Delta}g_k] $\\

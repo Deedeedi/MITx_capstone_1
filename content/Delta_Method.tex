@@ -1,0 +1,17 @@
+\section{Delta Method}
+
+To find the asymptotic CI if the estimator is a function of the mean. Goal is to find an expression that converges a function of the mean using the CLT. Let $Z_n$ be a sequence of r.v. $\sqrt{n} (Z_n-\theta) \xrightarrow[n \rightarrow \infty]{(d)} N(0,\sigma^2)$ and let $g: R\longrightarrow R$ be continuously differentiable at $\theta$, then:
+\begin{align*}
+&\sqrt{n}(g(Z_n) - g(\theta)) \xrightarrow [n \to \infty ]{(d)}\\
+&\mathcal{N}(0, g'(\theta )^2 \sigma ^2)
+\end{align*}
+\textbf{Example:} let  $X_1,... ,X_n ~ exp(\lambda)$  where  $\lambda>0$ . Let  $\overline{X}_ n= \frac{1}{n} \sum _{i = 1}^ n X_ i$ denote the sample mean. By the CLT, we know that $\sqrt{n}\left(\overline{X}_ n - \frac{1}{\lambda }\right) \xrightarrow [n \to \infty ]{(d)} N(0, \sigma ^2)$ for some value of  $\sigma^2$  that depends on  $\lambda$.
+
+If we set $g: \displaystyle \mathbb {R} \to \mathbb {R}$ and $\displaystyle x \mapsto 1/x,$ then by the Delta method:
+
+\begin{align*}
+&\sqrt{n}\left( g(\overline{X}_ n) - g\left(\frac{1}{\lambda }\right) \right)\\
+&\xrightarrow [n \to \infty ]{(d)} N(0, g'(E[X])^2\textsf{Var}{X})\\
+&\xrightarrow [n \to \infty ]{(d)} N(0, g'\left(\frac{1}{\lambda }\right)^2\frac{1}{\lambda ^2})\\
+&\xrightarrow [n \to \infty ]{(d)} N(0, \lambda^2)
+\end{align*}

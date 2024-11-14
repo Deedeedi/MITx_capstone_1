@@ -1,0 +1,52 @@
+
+\section{ML}
+\begin{itemize}
+    \item Supervised learning: prediction based on examples of correct behavior
+    \item Unsupervised learning: no explicit target, only data, goal to model/discover
+    \item Semi-supervised learning: supplement limited annotations with unsupervised learning
+    \item Active learning: learn to query the examples actually needed for learning
+    \item Transfer learning: how to apply what you have learned from A to B
+    \item Reinforcement learning: learning to act, not just predict; goal to optimize the consequences of actions
+\end{itemize}
+
+
+\section{Linear Regression}
+
+\subsection{Linear Perception Algorithm without Offset}
+\begin{algorithmic}
+\State Initialize $\theta \gets 0(vector)$
+\For{$t = 1, ..., T$ do}
+    \For{$i = 1, ..., n$ then}
+        \If{$y^{i}*(\theta*x^{(i)}) \leq 0$}
+            \State update $\theta =\theta + y^{(i)}x^{(i)}$
+        \EndIf
+    \EndFor
+\EndFor
+\end{algorithmic}
+
+
+\subsection{Linear Perception Algorithm with Offset}
+\begin{algorithmic}
+\State Initialize $\theta \gets 0(vector); \theta_{0} \gets 0(scalar)$
+\For{$t = 1, ..., T$ do}
+    \For{$i = 1, ..., n$ then}
+        \If{$y^{i}*(\theta*x^{(i)}+\theta_{0}) \leq 0$}
+            \State update $\theta =\theta + y^{(i)}x^{(i)}$
+            \State update $\theta_{0} =\theta_{0} + y^{(i)}$
+        \EndIf
+    \EndFor
+\EndFor
+\end{algorithmic}
+
+\subsection{Decision Boundary}
+The decision boundary is the set of points  which satisfy \\
+%\begin{align*}
+$\theta*x^{(i)}+\theta_{0} = 0$
+%\end{align*}
+
+
+\subsection{Margin Boundary}
+The margin boundary is the set of points  which satisfy \\
+%\begin{align*}
+$\theta*x^{(i)}+\theta_{0} = \pm 1$
+%\end{align*}

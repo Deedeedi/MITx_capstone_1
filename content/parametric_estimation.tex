@@ -1,0 +1,25 @@
+\section{Parametric Estimation}
+
+An \textbf{estimator} $\hat{\theta }_ n$ of $\theta$ is any statistic which does not depend on $\theta$.\\
+Estimators are random variables if they depend on the data (= realizations of random variables).\\
+%---------------------------------------
+\subsection{bias and variance of estimators}
+\textbf{Jensen's inequality}\\
+For any variable $X$ and any convex function $g$ \\
+$g(\mathbb{E}[X]) \leq \mathbb{E}[g(X)]$ \\
+\textbf{Bias of an estimator:}
+\[Bias(\hat{\theta}_n) = \mathbb{E}[\hat{\theta_n}] - \theta\]
+\textbf{Quadratic risk of an estimator}
+\begin{align*}
+R(\hat{\theta}_n) & = \mathbb{E}[(\hat{\theta}_n-\theta)^2]\\
+& = Bias^2 + Variance
+\end{align*}
+\textquotedblleft Low quadratic risk means both low bias and low variance \textquotedblright
+%---------------------------------------------
+\subsection{Asymptotic normality of an estimator}
+An estimator $\hat{\theta }_ n$ is \textbf{weakly consistent} if: $\displaystyle \lim _{n \to \infty } \hat{\theta }_ n = \theta$ or $ \hat{\theta}_n \xrightarrow[n \rightarrow \infty]{P} \mathbb{E}[g(X)]$. If the convergence is almost surely it is \textbf{strongly consistent}.\\
+\textbf{Asymptotic normality of an estimator:}
+\[\sqrt{n} (\hat{\theta}_n-\theta) \xrightarrow[n \rightarrow \infty]{(d)} N(0,\sigma^2)\]
+$\sigma^2$ is called the \textbf{Asymptotic Variance} of the estimator $\hat{\theta}_n$. In the case of the sample mean it is the same variance as as the single $X_i$.\\
+If the estimator is a function of the sample mean the \textbf{Delta Method} is needed to compute the asymptotic variance.\textbf{Asymptotic Variance} $\neq$ Variance of an estimator.\\
+Note: The asymptotic variance is the limit of a sequence as n goes to infinity. It is a specific real number, not a function of n. It comes from central limit theorem\\

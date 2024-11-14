@@ -1,0 +1,11 @@
+\section{Confidence intervals Approaches}
+
+\subsection{Solution 1 - Conservative Bound}
+1. use WLLN to get boundaries dependent on $\theta$ \\
+2. Find the most conservative bounds $argmax(f(\theta))$ \\
+\subsection{Solution 2 - Solve}
+transfer the 2 sided inequality equations to quadratic equation on $\theta$ \\
+$I_{solve} = [\hat{\lambda}(1+\frac{q_{\alpha/2}}{\sqrt{n}})^{-1}, \hat{\lambda}(1-\frac{q_{\alpha/2}}{\sqrt{n}})^{-1}]$
+\subsection{Solution 3 - plug-in}
+replace $\theta$ with $\hat{\theta}$ (slutzky theorem) \\
+$I_{plug-in} = [\hat{\lambda}(1-\frac{q_{\alpha/2}}{\sqrt{n}}), \hat{\lambda}(1+\frac{q_{\alpha/2}}{\sqrt{n}})]$ \\

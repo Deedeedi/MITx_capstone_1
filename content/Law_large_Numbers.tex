@@ -5,19 +5,29 @@ Let $X_1, ..., X_n \stackrel{iid}{\sim} P_{\mu}$, where $E(X_i)=\mu$ and $Var(X_
 \bar{X_n}& \xrightarrow[n \rightarrow \infty]{P, a.s.} \mu\\
 \frac{1}{n} \sum_{i=1}^{n} g(X_i)& \xrightarrow[n \rightarrow \infty]{P, a.s.} \mathbb{E}[g(X)]
 \end{align*}
-\textbf{Central Limit Theorem for Mean:}
-\begin{align*}
-\sqrt(n)\frac{\bar{X_n}-\mu}{\sqrt(\sigma^2)}& \xrightarrow[n \rightarrow \infty]{(d)} N(0,1)\\
-\sqrt(n)(\bar{X_n}-\mu)& \xrightarrow[n \rightarrow \infty]{(d)} N(0,\sigma^2)
-\end{align*}
 
-\textbf{Central Limit Theorem for Sums:}
+%-------------------------------------
+\textbf{The Markov Inequality} \\
+If $X\geq 0$ and $a > 0$, then \\
 
-\begin{align*}
-\sum{X}_{i=1}^{n} & \xrightarrow[n \rightarrow \infty]{(d)} N(n \mu, \sqrt(n)\sqrt(\sigma^2))\\
-\frac{\sum{X}_{i=1}^{n} - n\mu}{\sqrt(n) \sqrt(\sigma^2)} & \xrightarrow[n \rightarrow \infty]{(d)} N(0, 1)\\
-\end{align*}
+$P(X \geq a) \leq \frac{\mathbb{E}[X]}{a}$ \\
 
+\textquotedblleft If $X \geq 0$ and $\mathbb{E}[X]$ is small, then X is unlikely to be very large \textquotedblright
+
+%-------------------------------
+\textbf{The Chebyshev Inequality} \\
+With finite mean $\mu$ and variance $\sigma^2$
+$P(|X \geq \mu| \geq c) \leq \frac{\sigma^2}{c^2}$ \\
+\textquotedblleft If variance is small, then X is unlikely to be far from the mean \textquotedblright
+
+%--------------------------------
+\textbf{WLLN} \\
+$X_{1}...X_{n} i.i.d$. With finite mean $\mu$ and variance $\sigma^2$ \\
+For $\epsilon > 0$, $P(|M_{n}-\mu| \geq \epsilon) = P (|\frac{X_{1}+...+X_{n}}{n} -\mu| \geq \epsilon) \rightarrow 0, as n \rightarrow \infty $ \\
+\textquotedblleft The sample mean is the empirical frequency of event \textquotedblright \\
+$M_{n} \xrightarrow[n \rightarrow \infty]{P} \mu$ -> \textquotedblleft convergence in probability \textquotedblright \\
+
+%---------------------
 \textbf{Variance of the Mean:}
 \begin{align*}
 Var(\overline{X_n})&=(\frac{\sigma^2}{n})^2 Var(X_1 + X_2,...,X_n)\\
@@ -28,3 +38,4 @@ Var(\overline{X_n})&=(\frac{\sigma^2}{n})^2 Var(X_1 + X_2,...,X_n)\\
 E[\bar{X_n}] & =\frac{1}{n}E[X_1 + X_2,...,X_n]\\
 &=\mu.
 \end{align*}
+%--------------------------------
